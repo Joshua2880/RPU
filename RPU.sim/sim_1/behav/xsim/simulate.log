@@ -1,3 +1,0 @@
-Time resolution is 1 ps
-Error: B result from was FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE4E000. Expected value FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0FFFFFFFFFFFFFE4E000
-Time: 20 ns  Iteration: 0  Process: /NORMALIZER_TB/line__123  File: C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/normalizer_tb.vhd

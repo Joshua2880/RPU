@@ -1,7 +1,0 @@
-Running: xsim.dir/BIT_POS_TB_behav/xsimk.exe -simmode gui -wdb BIT_POS_TB_behav.wdb -simrunnum 0 -socket 53725
-Design successfully loaded
-Design Loading Memory Usage: 8248 KB (Peak: 8248 KB)
-Design Loading CPU Usage: 62 ms
-Simulation completed
-Simulation Memory Usage: 8772 KB (Peak: 8772 KB)
-Simulation CPU Usage: 78 ms
