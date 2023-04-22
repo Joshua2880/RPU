@@ -10,6 +10,7 @@ vhdl2008 xil_defaultlib  \
 "../../../../RPU.srcs/sources_1/new/rpu.vhd" \
 "../../../../RPU.srcs/sources_1/new/bit_pos_tb.vhd" \
 "../../../../RPU.srcs/sources_1/new/normalizer_tb.vhd" \
+"../../../../RPU.srcs/sources_1/new/blft_tb.vhd" \
 
 # Do not sort compile order
 nosort

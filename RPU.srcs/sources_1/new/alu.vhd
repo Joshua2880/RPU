@@ -59,6 +59,6 @@ begin
   result <= interm;
   
   overflow <= not (in0(DATA_WIDTH - 1) xor in1(DATA_WIDTH - 1)) and (in0(DATA_WIDTH - 1) xor interm(DATA_WIDTH - 1)) and (in1(DATA_WIDTH - 1) xor interm(DATA_WIDTH - 1)) when operation = 2x"1" else
-              in0(DATA_WIDTH - 1) xor in1(DATA_WIDTH - 2) when operation = 2x"2" else
+              in0(DATA_WIDTH - 1) xor in0(DATA_WIDTH - 2) when operation = 2x"2" else
               '0';
 end architecture;
