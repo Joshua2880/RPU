@@ -1,14 +1,14 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sat Apr 22 19:38:04 2023
+| Date         : Sat Apr 22 20:26:01 2023
 | Host         : DESKTOP-603T3DL running 64-bit major release  (build 9200)
-| Command      : report_utilization -file BLFT_CTRL_utilization_synth.rpt -pb BLFT_CTRL_utilization_synth.pb
-| Design       : BLFT_CTRL
+| Command      : report_utilization -file OP_TRANS_utilization_synth.rpt -pb OP_TRANS_utilization_synth.pb
+| Design       : OP_TRANS
 | Device       : xc7a35tcpg236-1
 | Speed File   : -1
 | Design State : Synthesized
--------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |    5 |     0 |          0 |     20800 |  0.02 |
-|   LUT as Logic          |    5 |     0 |          0 |     20800 |  0.02 |
+| Slice LUTs*             |   11 |     0 |          0 |     20800 |  0.05 |
+|   LUT as Logic          |   11 |     0 |          0 |     20800 |  0.05 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |    6 |     0 |          0 |     41600 |  0.01 |
-|   Register as Flip Flop |    6 |     0 |          0 |     41600 |  0.01 |
+| Slice Registers         |    9 |     0 |          0 |     41600 |  0.02 |
+|   Register as Flip Flop |    9 |     0 |          0 |     41600 |  0.02 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
@@ -59,7 +59,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 6     |          Yes |       Reset |            - |
+| 9     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -89,26 +89,26 @@ Warning! LUT value is adjusted to account for LUT combining.
 4. IO and GT Specific
 ---------------------
 
-+-----------------------------+------+-------+------------+-----------+-------+
-|          Site Type          | Used | Fixed | Prohibited | Available | Util% |
-+-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   16 |     0 |          0 |       106 | 15.09 |
-| Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
-| Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
-| PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
-| PHASER_REF                  |    0 |     0 |          0 |         5 |  0.00 |
-| OUT_FIFO                    |    0 |     0 |          0 |        20 |  0.00 |
-| IN_FIFO                     |    0 |     0 |          0 |        20 |  0.00 |
-| IDELAYCTRL                  |    0 |     0 |          0 |         5 |  0.00 |
-| IBUFDS                      |    0 |     0 |          0 |       104 |  0.00 |
-| GTPE2_CHANNEL               |    0 |     0 |          0 |         2 |  0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |          0 |        20 |  0.00 |
-| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |          0 |        20 |  0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |          0 |       250 |  0.00 |
-| IBUFDS_GTE2                 |    0 |     0 |          0 |         2 |  0.00 |
-| ILOGIC                      |    0 |     0 |          0 |       106 |  0.00 |
-| OLOGIC                      |    0 |     0 |          0 |       106 |  0.00 |
-+-----------------------------+------+-------+------------+-----------+-------+
++-----------------------------+------+-------+------------+-----------+---------+
+|          Site Type          | Used | Fixed | Prohibited | Available |  Util%  |
++-----------------------------+------+-------+------------+-----------+---------+
+| Bonded IOB                  | 2055 |     0 |          0 |       106 | 1938.68 |
+| Bonded IPADs                |    0 |     0 |          0 |        10 |    0.00 |
+| Bonded OPADs                |    0 |     0 |          0 |         4 |    0.00 |
+| PHY_CONTROL                 |    0 |     0 |          0 |         5 |    0.00 |
+| PHASER_REF                  |    0 |     0 |          0 |         5 |    0.00 |
+| OUT_FIFO                    |    0 |     0 |          0 |        20 |    0.00 |
+| IN_FIFO                     |    0 |     0 |          0 |        20 |    0.00 |
+| IDELAYCTRL                  |    0 |     0 |          0 |         5 |    0.00 |
+| IBUFDS                      |    0 |     0 |          0 |       104 |    0.00 |
+| GTPE2_CHANNEL               |    0 |     0 |          0 |         2 |    0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |          0 |        20 |    0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |          0 |        20 |    0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |          0 |       250 |    0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |          0 |         2 |    0.00 |
+| ILOGIC                      |    0 |     0 |          0 |       106 |    0.00 |
+| OLOGIC                      |    0 |     0 |          0 |       106 |    0.00 |
++-----------------------------+------+-------+------------+-----------+---------+
 
 
 5. Clocking
@@ -151,15 +151,12 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |   10 |                  IO |
-| OBUF     |    6 |                  IO |
-| FDRE     |    6 |        Flop & Latch |
-| LUT6     |    2 |                 LUT |
-| LUT5     |    1 |                 LUT |
-| LUT4     |    1 |                 LUT |
-| LUT3     |    1 |                 LUT |
-| LUT2     |    1 |                 LUT |
-| LUT1     |    1 |                 LUT |
+| OBUF     | 2051 |                  IO |
+| FDRE     |    9 |        Flop & Latch |
+| LUT3     |    6 |                 LUT |
+| LUT2     |    6 |                 LUT |
+| IBUF     |    4 |                  IO |
+| LUT1     |    2 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
