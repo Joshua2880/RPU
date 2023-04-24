@@ -58,7 +58,7 @@ port(
   secondary_2_out : out std_logic_vector(REG_WIDTH - 1 downto 0);
   secondary_3_out : out std_logic_vector(REG_WIDTH - 1 downto 0);
   
-  error : out std_logic
+  internal_error : out std_logic
 );
 end ALU_LAYER;
 
@@ -231,7 +231,7 @@ begin
       overflow => alu_3_error
     );
     
-  error <= alu_0_error or alu_1_error or alu_2_error or alu_3_error;
+  internal_error <= alu_0_error or alu_1_error or alu_2_error or alu_3_error;
   
   SECONDARY_MUX_0: entity work.MUX_2(dataflw)
     generic map(DATA_WIDTH => REG_WIDTH)

@@ -2,14 +2,18 @@
 2020.2
 Oct 14 2022
 05:20:55
-C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/alu.vhd,1682122040,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/alu_layer.vhd,,,alu,,,,,,,,
-C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/alu_layer.vhd,1682119175,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/blft_tb.vhd,,,alu_layer,,,,,,,,
+C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/alu.vhd,1682122040,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/alu_tb.vhd,,,alu,,,,,,,,
+C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/alu_layer.vhd,1682355448,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/blft_tb.vhd,,,alu_layer,,,,,,,,
+C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/alu_tb.vhd,1682356920,vhdl2008,,,,alu_tb,,,,,,,,
 C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/bit_pos.vhd,1682119175,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/normalizer.vhd,,,bit_pos,,,,,,,,
-C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/bit_pos_tb.vhd,1682189292,vhdl2008,,,,bit_pos_tb,,,,,,,,
-C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/blft_tb.vhd,1682198052,vhdl2008,,,,blft_tb,,,,,,,,
+C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/bit_pos_tb.vhd,1682355153,vhdl2008,,,,bit_pos_tb,,,,,,,,
+C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/blft_cntl.vhd,1682206473,vhdl2008,,,,blft_ctrl,,,,,,,,
+C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/blft_tb.vhd,1682355401,vhdl2008,,,,blft_tb,,,,,,,,
 C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/mux.vhd,1682119175,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/alu_layer.vhd;C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/bit_pos.vhd;C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/normalizer.vhd;C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/post_router.vhd;C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/pre_router.vhd,,,mux_2;mux_3,,,,,,,,
 C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/normalizer.vhd,1682119175,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/blft_tb.vhd,,,normalizer,,,,,,,,
-C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/normalizer_tb.vhd,1682119175,vhdl2008,,,,normalizer_tb,,,,,,,,
+C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/normalizer_tb.vhd,1682355164,vhdl2008,,,,normalizer_tb,,,,,,,,
+C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/op_trans.vhd,1682209393,vhdl2008,,,,op_trans,,,,,,,,
 C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/post_router.vhd,1682119175,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/blft_tb.vhd,,,post_router,,,,,,,,
 C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/pre_router.vhd,1682119175,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/blft_tb.vhd,,,pre_router,,,,,,,,
 C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/rpu.vhd,1682119175,vhdl2008,,,,rpu,,,,,,,,
+C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/types.vhd,1682207711,vhdl2008,C:/Users/Joshua/Dropbox/Tufts/Spring_2023/EE_156/RPU/RPU.srcs/sources_1/new/op_trans.vhd,,,types,,,,,,,,

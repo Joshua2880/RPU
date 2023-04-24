@@ -137,28 +137,36 @@ begin
       wait for period;
       assert A_out = vals.A_out
         report "A result from was " & to_hstring(A_out) &
-               ". Expected value " & to_hstring(vals.A_out);
+               ". Expected value " & to_hstring(vals.A_out)
+        severity error;
       assert B_out = vals.B_out
         report "B result from was " & to_hstring(B_out) &
-               ". Expected value " & to_hstring(vals.B_out);
+               ". Expected value " & to_hstring(vals.B_out)
+        severity error;
       assert C_out = vals.C_out
         report "C result from was " & to_hstring(C_out) &
-               ". Expected value " & to_hstring(vals.C_out);
+               ". Expected value " & to_hstring(vals.C_out)
+        severity error;
       assert D_out = vals.D_out
         report "D result from was " & to_hstring(D_out) &
-               ". Expected value " & to_hstring(vals.D_out);
+               ". Expected value " & to_hstring(vals.D_out)
+        severity error;
       assert E_out = vals.E_out
         report "E result from was " & to_hstring(E_out) &
-               ". Expected value " & to_hstring(vals.E_out);
+               ". Expected value " & to_hstring(vals.E_out)
+        severity error;
       assert F_out = vals.F_out
         report "F result from was " & to_hstring(F_out) &
-               ". Expected value " & to_hstring(vals.F_out);
+               ". Expected value " & to_hstring(vals.F_out)
+        severity error;
       assert G_out = vals.G_out
         report "G result from was " & to_hstring(G_out) &
-               ". Expected value " & to_hstring(vals.G_out);
+               ". Expected value " & to_hstring(vals.G_out)
+        severity error;
       assert H_out = vals.H_out
         report "H result from was " & to_hstring(H_out) &
-               ". Expected value " & to_hstring(vals.H_out);
+               ". Expected value " & to_hstring(vals.H_out)
+        severity error;
     end loop;
     wait;
   end process;

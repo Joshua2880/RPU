@@ -137,7 +137,8 @@ begin
       wait for period;
       assert output = vals.result
         report "Result from " & to_hstring(vals.in0) & " was " & to_hstring(output) &
-               ". Expected value " & to_hstring(vals.result);
+               ". Expected value " & to_hstring(vals.result)
+        severity error;
     end loop;
     wait;
   end process;

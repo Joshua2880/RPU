@@ -62,7 +62,7 @@ architecture Behavioral of BLFT_TB is
       G_out : std_logic_vector(WIDTH - 1 downto 0);
       H_out : std_logic_vector(WIDTH - 1 downto 0);
       
-      error : std_logic;
+      internal_error : std_logic;
     end record;
     
   type test_vals_array is array (natural range <>) of test_vals;
@@ -267,7 +267,7 @@ architecture Behavioral of BLFT_TB is
   signal G_out : std_logic_vector(WIDTH - 1 downto 0);
   signal H_out : std_logic_vector(WIDTH - 1 downto 0);
   
-  signal error : std_logic;
+  signal internal_error : std_logic;
 begin
   PRE_ROUTER: entity work.PRE_ROUTER(Behavioral)
     generic map(
@@ -324,7 +324,7 @@ begin
       secondary_2_out => post_secondary_2,
       secondary_3_out => post_secondary_3,
       
-      error => error
+      internal_error => internal_error
     );
     
   POST_ROUTER: entity work.POST_ROUTER(Behavioral)
@@ -403,39 +403,48 @@ begin
       
       assert A_out = vals.A_out
         report "Result A from test " & integer'image(i) & " was " & to_hstring(A_out) &
-               ". Expected value " & to_hstring(vals.A_out);
+               ". Expected value " & to_hstring(vals.A_out)
+        severity error;
                
       assert B_out = vals.B_out
         report "Result B from test " & integer'image(i) & " was " & to_hstring(B_out) &
-               ". Expected value " & to_hstring(vals.B_out);
+               ". Expected value " & to_hstring(vals.B_out)
+        severity error;
                
       assert C_out = vals.C_out
         report "Result C from test " & integer'image(i) & " was " & to_hstring(C_out) &
-               ". Expected value " & to_hstring(vals.C_out);
+               ". Expected value " & to_hstring(vals.C_out)
+        severity error;
                
       assert D_out = vals.D_out
         report "Result D from test " & integer'image(i) & " was " & to_hstring(D_out) &
-               ". Expected value " & to_hstring(vals.D_out);
+               ". Expected value " & to_hstring(vals.D_out)
+        severity error;
                
       assert E_out = vals.E_out
         report "Result E from test " & integer'image(i) & " was " & to_hstring(E_out) &
-               ". Expected value " & to_hstring(vals.E_out);
+               ". Expected value " & to_hstring(vals.E_out)
+        severity error;
                
       assert F_out = vals.F_out
         report "Result F from test " & integer'image(i) & " was " & to_hstring(F_out) &
-               ". Expected value " & to_hstring(vals.F_out);
+               ". Expected value " & to_hstring(vals.F_out)
+        severity error;
                
       assert G_out = vals.G_out
         report "Result G from test " & integer'image(i) & " was " & to_hstring(G_out) &
-               ". Expected value " & to_hstring(vals.G_out);
+               ". Expected value " & to_hstring(vals.G_out)
+        severity error;
                
       assert H_out = vals.H_out
         report "Result H from test " & integer'image(i) & " was " & to_hstring(H_out) &
-               ". Expected value " & to_hstring(vals.H_out);
+               ". Expected value " & to_hstring(vals.H_out)
+        severity error;
                
-      assert error = vals.error
-        report "Result error from test " & integer'image(i) & " was " & std_logic'image(error) &
-               ". Expected value " & std_logic'image(vals.error);
+      assert internal_error = vals.internal_error
+        report "Result error from test " & integer'image(i) & " was " & std_logic'image(internal_error) &
+               ". Expected value " & std_logic'image(vals.internal_error)
+        severity error;
     end loop;
     wait;
   end process;
