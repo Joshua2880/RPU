@@ -44,9 +44,7 @@ port(
   secondary_2_in : in std_logic_vector(REG_WIDTH - 1 downto 0);
   secondary_3_in : in std_logic_vector(REG_WIDTH - 1 downto 0);
   
-  prime_neg : in std_logic;
-  swap : in std_logic;
-  operation : in std_logic_vector(1 downto 0);
+  op : in std_logic_vector(3 downto 0);
   
   prime_0_out : out std_logic_vector(REG_WIDTH - 1 downto 0);
   prime_1_out : out std_logic_vector(REG_WIDTH - 1 downto 0);
@@ -63,6 +61,10 @@ port(
 end ALU_LAYER;
 
 architecture Behavioral of ALU_LAYER is
+  signal prime_neg : std_logic;
+  signal swap : std_logic;
+  signal alu_op : std_logic_vector(1 downto 0);
+
   signal prime_0_neg : std_logic_vector(REG_WIDTH - 1 downto 0);
   signal prime_1_neg : std_logic_vector(REG_WIDTH - 1 downto 0);
   signal prime_2_neg : std_logic_vector(REG_WIDTH - 1 downto 0);
@@ -83,6 +85,10 @@ architecture Behavioral of ALU_LAYER is
   signal alu_2_error : std_logic;
   signal alu_3_error : std_logic;
 begin
+  prime_neg <= op(3);
+  swap <= op(2);
+  alu_op <= op(1 downto 0);
+
   PRIME_NEG_MUX_0: entity work.MUX_2(dataflw)
     generic map(DATA_WIDTH => REG_WIDTH)
     port map(
@@ -196,7 +202,7 @@ begin
     port map(
       in0 => alu_0_in0,
       in1 => alu_0_in1,
-      operation => operation,
+      operation => alu_op,
       result => prime_0_out,
       overflow => alu_0_error
     );
@@ -206,7 +212,7 @@ begin
     port map(
       in0 => alu_1_in0,
       in1 => alu_1_in1,
-      operation => operation,
+      operation => alu_op,
       result => prime_1_out,
       overflow => alu_1_error
     );
@@ -216,7 +222,7 @@ begin
     port map(
       in0 => alu_2_in0,
       in1 => alu_2_in1,
-      operation => operation,
+      operation => alu_op,
       result => prime_2_out,
       overflow => alu_2_error
     );
@@ -226,7 +232,7 @@ begin
     port map(
       in0 => alu_3_in0,
       in1 => alu_3_in1,
-      operation => operation,
+      operation => alu_op,
       result => prime_3_out,
       overflow => alu_3_error
     );

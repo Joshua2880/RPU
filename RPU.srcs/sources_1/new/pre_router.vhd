@@ -31,10 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+library work;
+use work.types.all;
+
 entity PRE_ROUTER is
 generic(REG_WIDTH : integer := 256);
 port(
-  axis : in std_logic_vector(1 downto 0);
+  axis : in AXIS;
   A : in std_logic_vector(REG_WIDTH - 1 downto 0);
   B : in std_logic_vector(REG_WIDTH - 1 downto 0);
   C : in std_logic_vector(REG_WIDTH - 1 downto 0);
@@ -57,7 +60,10 @@ port(
 end PRE_ROUTER;
 
 architecture Behavioral of PRE_ROUTER is
+  signal axis_i : std_logic_vector(1 downto 0);
 begin
+  axis_i <= to_vector(axis);
+
   prime_0 <= E;
   
   PRIME_MUX_1: entity work.MUX_3(dataflw)
@@ -68,7 +74,7 @@ begin
       in0 => A,
       in1 => G,
       in2 => F,
-      sel => axis,
+      sel => axis_i,
       output => prime_1
     );
 
@@ -80,7 +86,7 @@ begin
       in0 => F,
       in1 => A,
       in2 => G,
-      sel => axis,
+      sel => axis_i,
       output => prime_2
     );
     
@@ -92,7 +98,7 @@ begin
       in0 => B,
       in1 => C,
       in2 => H,
-      sel => axis,
+      sel => axis_i,
       output => prime_3
     );
   
@@ -104,7 +110,7 @@ begin
       in0 => G,
       in1 => F,
       in2 => A,
-      sel => axis,
+      sel => axis_i,
       output => secondary_0
     );
 
@@ -116,7 +122,7 @@ begin
       in0 => C,
       in1 => H,
       in2 => B,
-      sel => axis,
+      sel => axis_i,
       output => secondary_1
     );
     
@@ -128,7 +134,7 @@ begin
       in0 => H,
       in1 => B,
       in2 => C,
-      sel => axis,
+      sel => axis_i,
       output => secondary_2
     );
     

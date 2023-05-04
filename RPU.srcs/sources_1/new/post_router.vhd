@@ -31,10 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+library work;
+use work.types.all;
+
 entity POST_ROUTER is
 generic(REG_WIDTH : integer := 256);
 port(
-  axis : in std_logic_vector(1 downto 0);
+  axis : in AXIS;
   prime_0 : in std_logic_vector(REG_WIDTH - 1 downto 0);
   prime_1 : in std_logic_vector(REG_WIDTH - 1 downto 0);
   prime_2 : in std_logic_vector(REG_WIDTH - 1 downto 0);
@@ -57,8 +60,10 @@ port(
 end POST_ROUTER;
 
 architecture Behavioral of POST_ROUTER is
-
+  signal axis_i : std_logic_vector(1 downto 0);
 begin
+  axis_i <= to_vector(axis);
+
   A_MUX: entity work.MUX_3(dataflw)
     generic map(
       DATA_WIDTH => REG_WIDTH
@@ -67,7 +72,7 @@ begin
       in0 => prime_1,
       in1 => prime_2,
       in2 => secondary_0,
-      sel => axis,
+      sel => axis_i,
       output => A
     );
     
@@ -79,7 +84,7 @@ begin
       in0 => prime_3,
       in1 => secondary_2,
       in2 => secondary_1,
-      sel => axis,
+      sel => axis_i,
       output => B
     );
     
@@ -91,7 +96,7 @@ begin
       in0 => secondary_1,
       in1 => prime_3,
       in2 => secondary_2,
-      sel => axis,
+      sel => axis_i,
       output => C
     );
   
@@ -107,7 +112,7 @@ begin
       in0 => prime_2,
       in1 => secondary_0,
       in2 => prime_1,
-      sel => axis,
+      sel => axis_i,
       output => F
     );
     
@@ -119,7 +124,7 @@ begin
       in0 => secondary_0,
       in1 => prime_1,
       in2 => prime_2,
-      sel => axis,
+      sel => axis_i,
       output => G
     );
     
@@ -131,7 +136,7 @@ begin
       in0 => secondary_2,
       in1 => secondary_1,
       in2 => prime_3,
-      sel => axis,
+      sel => axis_i,
       output => H
     );
 
